@@ -18,7 +18,7 @@ class GroupFactory extends Factory
     {
         return [
             'name' => fake()->company(),
-            'max_members' => fake()->numberBetween(2, 10),
+            'max_slots' => fake()->numberBetween(2, 10),
             'price' => fake()->numberBetween(100, 50000),
             'status' => fake()->randomElement(['active', 'canceled']),
         ];
