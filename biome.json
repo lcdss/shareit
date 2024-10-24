@@ -1,0 +1,78 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "attributePosition": "auto",
+    "lineEnding": "lf",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded",
+      "quoteStyle": "single",
+      "enabled": true
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "include": ["src/**/*.tsx", "src/**/*.ts"],
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUndeclaredVariables": "warn",
+        "noUnusedImports": "warn",
+        "noUnusedVariables": "warn",
+        "useArrayLiterals": "error",
+        "noUndeclaredDependencies": "warn",
+        "noUnusedFunctionParameters": "warn"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "fix": "safe",
+          "level": "warn",
+          "options": {}
+        }
+      },
+      "style": {
+        "noDefaultExport": "error",
+        "useCollapsedElseIf": "warn",
+        "useConsistentArrayType": {
+          "level": "warn",
+          "options": {
+            "syntax": "shorthand"
+          }
+        },
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "requireAscii": true,
+            "filenameCases": ["kebab-case"]
+          }
+        },
+        "useForOf": "warn",
+        "useFragmentSyntax": "warn",
+        "useShorthandArrayType": "error",
+        "useShorthandAssign": "warn",
+        "noYodaExpression": "warn",
+        "useConsistentBuiltinInstantiation": "warn",
+        "useExplicitLengthCheck": "warn",
+        "useThrowNewError": "warn"
+      },
+      "complexity": {
+        "noUselessStringConcat": "warn",
+        "noUselessUndefinedInitialization": "warn",
+        "useDateNow": "warn"
+      },
+      "a11y": {
+        "useFocusableInteractive": "warn",
+        "useGenericFontNames": "error",
+        "useSemanticElements": "warn"
+      }
+    }
+  }
+}
